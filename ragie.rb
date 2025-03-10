@@ -5,21 +5,21 @@
 class Ragie < Formula
   desc "A command line interface for importing various data formats into Ragie"
   homepage "https://github.com/ragie/ragie-cli"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.1/ragie_Darwin_x86_64.tar.gz"
-      sha256 "b29632cf33f5eeebf0a8e17fa53910eb2fd12e0f19d8c09477c77d3692a75199"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.2/ragie_Darwin_x86_64.tar.gz"
+      sha256 "1b0789a79b6cca7d11e341f4783985cbf176b6cd28dfd90b9457ecc7577f0f22"
 
       def install
         bin.install "ragie"
       end
     end
     on_arm do
-      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.1/ragie_Darwin_arm64.tar.gz"
-      sha256 "1d21850c511eca527f9ae76ac13589ce23b36c22954f441c4e9800901f348ecb"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.2/ragie_Darwin_arm64.tar.gz"
+      sha256 "2ada8e5e439cdb10e9aa543fa533284d09dee3b3a77e3a7e0b29e3882d0035ca"
 
       def install
         bin.install "ragie"
@@ -30,8 +30,8 @@ class Ragie < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.1/ragie_Linux_x86_64.tar.gz"
-        sha256 "4d15f49ef771c7fc6e750fa6d4352ebb30f53aa117737958e9f74eaf7b5521e3"
+        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.2/ragie_Linux_x86_64.tar.gz"
+        sha256 "bc0b168e838993da23fe19d52c42f9f6abbd3d3c39a41707d36d880ca5e9b1c5"
 
         def install
           bin.install "ragie"
@@ -40,8 +40,8 @@ class Ragie < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.1/ragie_Linux_arm64.tar.gz"
-        sha256 "ec9ce56deb2ea60d502e49e86b7d3cbf05c98217b0865b01f1f6e303df46b94a"
+        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.2/ragie_Linux_arm64.tar.gz"
+        sha256 "7d3a1ccb9e966ba6c36c0f923ded38a084632da5da7c196a8cb449a7545f0e16"
 
         def install
           bin.install "ragie"
