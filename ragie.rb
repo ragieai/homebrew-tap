@@ -11,7 +11,7 @@ class Ragie < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Darwin_x86_64.tar.gz"
-      sha256 "e23344f3f7fe765f280144da462c6df3667bb58dd7596cf7d286a93d3c4eee3e"
+      sha256 "76f348d802909215edae92244601da69930d2b8973c08ecfbb4844e69207990c"
 
       def install
         bin.install "ragie"
@@ -19,7 +19,7 @@ class Ragie < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Darwin_arm64.tar.gz"
-      sha256 "4c84e0fd29547317435e3ad488eb08065bd4a56a1a51598c32e6cf9aea978b62"
+      sha256 "c9b0c3bf21c1f3b98e227d655e72e268b8c030c94c64c9cfd6f0a231bec7ee51"
 
       def install
         bin.install "ragie"
@@ -31,7 +31,7 @@ class Ragie < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Linux_x86_64.tar.gz"
-        sha256 "bfddd69767243826c4637486cf413f4d3711f579ed33978b2faaf270a69179fc"
+        sha256 "0c734e709ffbeb71123563d31eb59b368c09202cae048b65fc07f6a236631afe"
 
         def install
           bin.install "ragie"
@@ -41,7 +41,7 @@ class Ragie < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Linux_arm64.tar.gz"
-        sha256 "7688dda6634d9271b1fe60a7d7f55b858f8a9ad771fea5eefd64dbb00ebc1d51"
+        sha256 "8018173ca16e64b0137da04819daca49b97712324acc26ba48c5d9305a3cb3fe"
 
         def install
           bin.install "ragie"
