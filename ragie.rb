@@ -5,21 +5,21 @@
 class Ragie < Formula
   desc "A command line interface for importing various data formats into Ragie"
   homepage "https://github.com/ragie/ragie-cli"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.6/ragie_Darwin_x86_64.tar.gz"
-      sha256 "38a144cfe8b7ab8ceb41e54b00a9cdd55f5a42b24a44fe7e59f3491d49d330cc"
+    if Hardware::CPU.intel?
+      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Darwin_x86_64.tar.gz"
+      sha256 "e23344f3f7fe765f280144da462c6df3667bb58dd7596cf7d286a93d3c4eee3e"
 
       def install
         bin.install "ragie"
       end
     end
-    on_arm do
-      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.6/ragie_Darwin_arm64.tar.gz"
-      sha256 "08bdd654441943febdae11b229b4d043be9763190e1c53ac3d4331178c3f3e46"
+    if Hardware::CPU.arm?
+      url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Darwin_arm64.tar.gz"
+      sha256 "4c84e0fd29547317435e3ad488eb08065bd4a56a1a51598c32e6cf9aea978b62"
 
       def install
         bin.install "ragie"
@@ -28,20 +28,20 @@ class Ragie < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.6/ragie_Linux_x86_64.tar.gz"
-        sha256 "b742a4f26887f75b8a56aa803023137cea9367de9e9bd08cadba13a4c4f6a94e"
+        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Linux_x86_64.tar.gz"
+        sha256 "bfddd69767243826c4637486cf413f4d3711f579ed33978b2faaf270a69179fc"
 
         def install
           bin.install "ragie"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.6/ragie_Linux_arm64.tar.gz"
-        sha256 "d34893dbf8c353ae960c50d428131ee0e2b0c963e732c5b9b39236c80aac7ce4"
+        url "https://github.com/ragieai/ragie-cli/releases/download/v0.0.7/ragie_Linux_arm64.tar.gz"
+        sha256 "7688dda6634d9271b1fe60a7d7f55b858f8a9ad771fea5eefd64dbb00ebc1d51"
 
         def install
           bin.install "ragie"
