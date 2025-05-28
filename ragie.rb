@@ -5,21 +5,21 @@
 class Ragie < Formula
   desc "A command line interface for importing various data formats into Ragie"
   homepage "https://github.com/ragie/ragie-cli"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ragieai/ragie-cli/releases/download/v1.0.0/ragie_Darwin_x86_64.tar.gz"
-      sha256 "60bb96175770d3d861931fe01a7c3454f4a80346da24ef561e7aa48013eb57ee"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v1.1.0/ragie_Darwin_x86_64.tar.gz"
+      sha256 "925d79bfb1e130afe550f093487211325acd6b87b063e59e8cf3ed780583d0f7"
 
       def install
         bin.install "ragie"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ragieai/ragie-cli/releases/download/v1.0.0/ragie_Darwin_arm64.tar.gz"
-      sha256 "48aa60592a44adb2619a97496d68b740cf44bab672b446ba3a32014408626514"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v1.1.0/ragie_Darwin_arm64.tar.gz"
+      sha256 "8ed9956e81e628e8431df194726d39b2367de8470b9b41377cee410e9828a3d5"
 
       def install
         bin.install "ragie"
@@ -29,15 +29,15 @@ class Ragie < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ragieai/ragie-cli/releases/download/v1.0.0/ragie_Linux_x86_64.tar.gz"
-      sha256 "246e304414c009eb6bedf3baf5aa8a9207cb2ac4b856b3c5cf886087b9826e98"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v1.1.0/ragie_Linux_x86_64.tar.gz"
+      sha256 "50693b89fb5407241f0d5b422ce356fc1d7aab67f4f18b4ed70aec422e6e7364"
       def install
         bin.install "ragie"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/ragieai/ragie-cli/releases/download/v1.0.0/ragie_Linux_arm64.tar.gz"
-      sha256 "8612155cc2fd5c1c091414c1ff70df662a5ff5b7a177c0885f3961c71a3362df"
+      url "https://github.com/ragieai/ragie-cli/releases/download/v1.1.0/ragie_Linux_arm64.tar.gz"
+      sha256 "8488585c039f4b6d7c0729875d773e8fac8abfb87c668fad889510fb08af0f99"
       def install
         bin.install "ragie"
       end
